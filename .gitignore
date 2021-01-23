@@ -1,0 +1,8 @@
+node_modules
+.next
+.env
+out
+build
+dist
+public/sitemap.xml
+public/robots.txt
