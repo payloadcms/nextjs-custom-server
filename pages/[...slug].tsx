@@ -1,11 +1,11 @@
 import React from 'react';
 import payload from 'payload';
 import { GetServerSideProps } from 'next';
-import { IPage } from '../collections/Page';
+import { PageType } from '../collections/Page';
 import NotFound from '../components/NotFound';
 
 export type Props = {
-  page?: IPage
+  page?: PageType
   statusCode: number
 }
 

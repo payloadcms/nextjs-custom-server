@@ -6,7 +6,7 @@ When you use Payload, you plug it into _**your**_ Express server. That's a funda
 
 One of the strengths of this pattern is that it lets you do powerful things like combining your Payload CMS directly with a custom NextJS server. With this pattern, you can host your Payload CMS as well as a fully dynamic, CMS-integrated NextJS site right on one host—while still getting all of the benefits of a headless CMS.
 
-#### This pattern is great for the following situations:
+## This pattern is great for the following situations:
 
 **1. If your content changes often, or is completely dynamic in nature.**
 
@@ -19,6 +19,12 @@ If you need to generate views that depend on user-generated data, or data that c
 **3. If parts of your app need to be server-rendered, but others are better suited to static generation.**
 
 Commonly, you might use Payload to build full applications - where certain views are statically generated, like pages and posts, but other views are fully dynamic and must be server-rendered—like an account portal or similar. If this describes your application, you can benefit by utilizing NextJS in both a server-rendered and statically generated context. At the same time, you'll benefit from running your Payload app completely within the same NextJS server.
+
+## Contents
+
+1. `Page` Collection with featured image, layout builder, and meta info
+1. `Media` Collection with `upload` support
+1. `Header` Global with navigation support
 
 ## Installation
 
