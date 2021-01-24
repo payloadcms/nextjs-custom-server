@@ -21,6 +21,11 @@ const Slider: Block = {
   fields: [
     {
       name: 'slides',
+      label: 'Slides',
+      labels: {
+        singular: 'Slide',
+        plural: 'Slides',
+      },
       type: 'array',
       minRows: 2,
       maxRows: 10,

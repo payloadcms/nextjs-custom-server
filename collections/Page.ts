@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload/types';
+import { MediaType } from './Media';
 import formatSlug from '../utilities/formatSlug';
 import Slider, { SliderType } from '../blocks/Slider';
 import Content, { ContentType } from '../blocks/Content';
@@ -6,7 +7,13 @@ import Content, { ContentType } from '../blocks/Content';
 export type PageType = {
   title: string
   slug: string
+  image?: MediaType
   layout: SliderType | ContentType
+  meta: {
+    title?: string
+    description?: string
+    keywords?: string
+  }
 }
 
 const Page: CollectionConfig = {
@@ -34,6 +41,7 @@ const Page: CollectionConfig = {
       name: 'layout',
       label: 'Page Layout',
       type: 'blocks',
+      minRows: 1,
       blocks: [
         Content,
         Slider,

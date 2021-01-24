@@ -2,6 +2,14 @@ import { CollectionConfig } from 'payload/types';
 
 export type MediaType = {
   filename: string
+  alt: string
+  sizes: {
+    card?: {
+      filename: string
+      width: number
+      height: number
+    }
+  }
 }
 
 const Media: CollectionConfig = {
@@ -10,6 +18,7 @@ const Media: CollectionConfig = {
     read: (): boolean => true, // Everyone can read Media
   },
   upload: {
+    adminThumbnail: 'card',
     imageSizes: [
       {
         name: 'card',
@@ -23,6 +32,7 @@ const Media: CollectionConfig = {
       name: 'alt',
       label: 'Alt Text',
       type: 'text',
+      required: true,
     },
   ],
 };
