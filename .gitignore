@@ -4,5 +4,8 @@ node_modules
 out
 build
 dist
-public/sitemap.xml
-public/robots.txt
+media/*
+
+!media/payload-1024x576.jpg
+!media/payload-640x480.jpg
+!media/payload.jpg

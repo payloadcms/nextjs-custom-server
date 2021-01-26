@@ -9,6 +9,11 @@ export type MediaType = {
       width: number
       height: number
     }
+    feature?: {
+      filename: string
+      width: number
+      height: number
+    }
   }
 }
 
@@ -24,6 +29,11 @@ const Media: CollectionConfig = {
         name: 'card',
         width: 640,
         height: 480,
+      },
+      {
+        name: 'feature',
+        width: 1024,
+        height: 576,
       },
     ],
   },

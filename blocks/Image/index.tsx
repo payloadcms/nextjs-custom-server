@@ -1,12 +1,17 @@
 import React from 'react';
+import getConfig from 'next/config';
 import { Block } from 'payload/types';
 import { MediaType } from '../../collections/Media';
+import RichText from '../../components/RichText';
 import classes from './index.module.css';
+
+const { publicRuntimeConfig: { SERVER_URL } } = getConfig();
 
 export type Type = {
   blockType: 'image'
   blockName?: string
   image: MediaType
+  caption?: any
   type: 'normal' | 'wide' | 'fullscreen'
 }
 
@@ -61,14 +66,27 @@ export const Image: Block = {
 };
 
 export const Component: React.FC<Type> = (props) => {
-  const { image } = props;
+  const { image, type, caption } = props;
 
-  return (
-    <div className={classes.wrap}>
-      <img
-        src={`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/media/${image.filename}`}
-        alt={image.alt}
-      />
-    </div>
-  );
+  if (typeof image === 'object') {
+    let filenameToRender = image.filename;
+    if (image.sizes[type]) filenameToRender = image.sizes[type];
+
+    return (
+      <div className={`${classes.wrap} ${classes[type]}`}>
+        <img
+          src={`${SERVER_URL}/media/${filenameToRender}`}
+          alt={image.alt}
+        />
+        {caption && (
+          <RichText
+            className={classes.caption}
+            content={caption}
+          />
+        )}
+      </div>
+    );
+  }
+
+  return null;
 };

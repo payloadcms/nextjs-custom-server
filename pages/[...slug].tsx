@@ -30,17 +30,29 @@ const Page: React.FC<Props> = (props) => {
         keywords={page.meta?.keywords}
       />
       <header className={classes.header}>
-        <h1 className={classes.title}>{page.title}</h1>
+        <h1>{page.title}</h1>
       </header>
       <div className={classes.featuredImage}>
         {page.image && (
-        <img
-          src={`${SERVER_URL}/media/${page.image.filename}`}
-          alt={page.image.alt}
-        />
+          <img
+            src={`${SERVER_URL}/media/${page.image.sizes?.feature?.filename || page.image.filename}`}
+            alt={page.image.alt}
+          />
         )}
       </div>
       <RenderBlocks layout={page.layout} />
+      <footer className={classes.footer}>
+        <hr />
+        NextJS + Payload Server Boilerplate made by
+        {' '}
+        <a
+          href="https://payloadcms.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Payload
+        </a>
+      </footer>
     </main>
   );
 };

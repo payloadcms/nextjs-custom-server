@@ -1,0 +1,20 @@
+.wrap {
+  margin: calc(var(--baseline) * 2) auto;
+}
+
+.normal,
+.wide {
+  padding: 0 var(--baseline);
+}
+
+.normal {
+  max-width: var(--max-width-s);
+}
+
+.wide {
+  max-width: var(--max-width-m);
+}
+
+.caption {
+  text-align: center;
+}

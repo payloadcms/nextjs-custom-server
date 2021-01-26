@@ -9,7 +9,7 @@ type Props = {
 }
 
 const RenderBlocks: React.FC<Props> = ({ layout, className }) => (
-  <ul className={[
+  <div className={[
     classes.renderBlocks,
     className,
   ].filter(Boolean).join(' ')}
@@ -19,18 +19,18 @@ const RenderBlocks: React.FC<Props> = ({ layout, className }) => (
 
       if (Block) {
         return (
-          <li
+          <section
             key={i}
             className={classes.block}
           >
             <Block {...block} />
-          </li>
+          </section>
         );
       }
 
       return null;
     })}
-  </ul>
+  </div>
 );
 
 export default RenderBlocks;
