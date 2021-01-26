@@ -8,14 +8,15 @@
     "build:server": "tsc --project tsconfig.server.json",
     "build:payload": "payload build",
     "build": "NODE_ENV=production yarn build:payload && yarn build:server && NEXT_BUILD=true node dist/index.js",
-    "dev": "ts-node --project tsconfig.server.json server/index.ts",
+    "dev": "node dev.js",
     "serve": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
+    "@babel/register": "^7.12.10",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "next": "^10.0.5",
-    "payload": "^0.2.4",
+    "payload": "^0.2.5",
     "react": "^17.0.1",
     "typescript": "^4.1.3"
   },

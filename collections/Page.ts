@@ -1,14 +1,17 @@
 import { CollectionConfig } from 'payload/types';
 import { MediaType } from './Media';
 import formatSlug from '../utilities/formatSlug';
-import Slider, { SliderType } from '../blocks/Slider';
-import Content, { ContentType } from '../blocks/Content';
+import { Image, Type as ImageType } from '../blocks/Image';
+import { CallToAction, Type as CallToActionType } from '../blocks/CallToAction';
+import { Content, Type as ContentType } from '../blocks/Content';
 
-export type PageType = {
+export type Layout = CallToActionType | ContentType | ImageType
+
+export type Type = {
   title: string
   slug: string
   image?: MediaType
-  layout: SliderType | ContentType
+  layout: Layout[]
   meta: {
     title?: string
     description?: string
@@ -16,7 +19,7 @@ export type PageType = {
   }
 }
 
-const Page: CollectionConfig = {
+export const Page: CollectionConfig = {
   slug: 'pages',
   admin: {
     useAsTitle: 'title',
@@ -43,8 +46,9 @@ const Page: CollectionConfig = {
       type: 'blocks',
       minRows: 1,
       blocks: [
+        CallToAction,
         Content,
-        Slider,
+        Image,
       ],
     },
     {

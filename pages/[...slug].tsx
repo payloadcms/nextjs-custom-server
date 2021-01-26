@@ -1,10 +1,12 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import payload from 'payload';
 import { GetServerSideProps } from 'next';
 import getConfig from 'next/config';
-import { PageType } from '../collections/Page';
+import { Type as PageType } from '../collections/Page';
 import NotFound from '../components/NotFound';
 import Head from '../components/Head';
+import classes from '../css/page.module.css';
+import RenderBlocks from '../components/RenderBlocks';
 
 const { publicRuntimeConfig: { SERVER_URL } } = getConfig();
 
@@ -21,20 +23,25 @@ const Page: React.FC<Props> = (props) => {
   }
 
   return (
-    <Fragment>
+    <main className={classes.page}>
       <Head
         title={page.meta?.title || page.title}
         description={page.meta?.description}
         keywords={page.meta?.keywords}
       />
-      <h1>{page.title}</h1>
-      {page.image && (
+      <header className={classes.header}>
+        <h1 className={classes.title}>{page.title}</h1>
+      </header>
+      <div className={classes.featuredImage}>
+        {page.image && (
         <img
           src={`${SERVER_URL}/media/${page.image.filename}`}
           alt={page.image.alt}
         />
-      )}
-    </Fragment>
+        )}
+      </div>
+      <RenderBlocks layout={page.layout} />
+    </main>
   );
 };
 

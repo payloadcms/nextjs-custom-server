@@ -1,0 +1,21 @@
+.page {
+  margin: 60px 0;
+}
+
+.header {
+  max-width: 700px;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.header,
+.featuredImage {
+  margin: 0 auto;
+}
+
+.featuredImage {
+  max-width: 1000px;
+  margin-bottom: 60px;
+}
