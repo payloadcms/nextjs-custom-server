@@ -1,11 +1,8 @@
 import React from 'react';
-import getConfig from 'next/config';
 import { Block } from 'payload/types';
 import { MediaType } from '../../collections/Media';
 import RichText from '../../components/RichText';
 import classes from './index.module.css';
-
-const { publicRuntimeConfig: { SERVER_URL } } = getConfig();
 
 export type Type = {
   blockType: 'image'
@@ -75,7 +72,7 @@ export const Component: React.FC<Type> = (props) => {
     return (
       <div className={`${classes.wrap} ${classes[type]}`}>
         <img
-          src={`${SERVER_URL}/media/${filenameToRender}`}
+          src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${filenameToRender}`}
           alt={image.alt}
         />
         {caption && (
