@@ -30,7 +30,7 @@ Commonly, you might use Payload to build full applications - where certain views
 
 Here is a step-by-step guide for how to use this repo:
 
-1. Clone down the repo
+1. Clone this repo using `git clone --depth=1 https://github.com/payloadcms/nextjs-custom-server.git <YOUR_PROJECT_NAME>`
 1. Run `cp .env.example .env` to create an `.env` file
 1. Fill out your `.env` file with values that describe your environment
 1. Run `yarn` or `npm install`

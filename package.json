@@ -1,5 +1,11 @@
 {
   "name": "payload-nextjs-server",
+  "description": "A boilerplate project for NextJS with Payload CMS",
+  "keywords": [
+    "payload",
+    "cms",
+    "nextjs"
+  ],
   "version": "0.0.1",
   "private": false,
   "author": "TRBL",
