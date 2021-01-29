@@ -38,7 +38,7 @@
       "type": "wide",
       "blockType": "image",
       "blockName": "Wide Image Demo",
-      "image": "{{IMAGE_ID_HERE}}",
+      "image": "{{IMAGE_ID}}",
       "caption": [
         {
           "children": [
@@ -66,7 +66,7 @@
       "type": "normal",
       "blockType": "image",
       "blockName": "Normal Width Image Demo",
-      "image": "{{IMAGE_ID_HERE}}",
+      "image": "{{IMAGE_ID}}",
       "caption": [
         {
           "children": [
@@ -100,13 +100,13 @@
         {
           "type": "page",
           "label": "Don't click me",
-          "page": "{{SAMPLE_PAGE_ID_HERE}}"
+          "page": "{{SAMPLE_PAGE_ID}}"
         }
       ]
     }
   ],
   "title": "Home",
-  "image": "{{IMAGE_ID_HERE}}",
+  "image": "{{IMAGE_ID}}",
   "slug": "home",
   "meta": {
     "title": "Home Page Title",

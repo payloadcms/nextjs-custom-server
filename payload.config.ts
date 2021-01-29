@@ -4,9 +4,10 @@ import Page from './collections/Page';
 import Media from './collections/Media';
 
 dotenv.config();
+const serverURL = process.env.SERVER_URL;
 
 export default buildConfig({
-  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
+  serverURL,
   collections: [
     Page,
     Media,

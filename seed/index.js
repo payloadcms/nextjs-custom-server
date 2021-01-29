@@ -59,25 +59,13 @@ const createHomePage = async () => {
     data: sample
   });
 
-  home.layout = home.layout
-    .map((block) => {
-      if (block.blockType === 'image') {
-        block.image = createdMedia.id;
-      }
-      if (block.blockType === 'cta') {
-        block.buttons.map((button) => {
-          if (button.type === 'page') {
-            button.page = createdSamplePage.id;
-          }
-        })
-      }
-      return block;
-    });
-  home.image = createdMedia.id;
+  const homeString = JSON.stringify(home)
+    .replaceAll('{{IMAGE_ID}}', createdMedia.id)
+    .replaceAll('{{SAMPLE_PAGE_ID}}', createdSamplePage.id);
 
   const createdPage = await payload.create({
     collection: 'pages',
-    data: home,
+    data: JSON.parse(homeString),
   });
 
   console.log('Seed completed!')
