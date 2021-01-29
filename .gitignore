@@ -5,7 +5,3 @@ out
 build
 dist
 media/*
-
-!media/payload-1024x576.jpg
-!media/payload-640x480.jpg
-!media/payload.jpg

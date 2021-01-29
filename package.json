@@ -15,6 +15,7 @@
     "build:payload": "payload build",
     "build": "NODE_ENV=production yarn build:payload && yarn build:server && NEXT_BUILD=true node dist/index.js",
     "dev": "node dev.js",
+    "seed": "node seed/index.js",
     "serve": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
