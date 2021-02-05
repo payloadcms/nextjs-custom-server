@@ -9221,10 +9221,10 @@ pause@0.0.1:
   resolved "https://registry.yarnpkg.com/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
   integrity sha1-HUCLP9t2kjuVQ9lvtMnf1TXZy10=
 
-payload@^0.2.5:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/payload/-/payload-0.2.6.tgz#cdea89d062d77e14311834901d821b7f17fe5b05"
-  integrity sha512-U64wCbxxuyqmrw9W9ZaNfawwWlMfobxcpKIr6FxWm1k/NAGB9VHpw5kZ+fwZipJZsryu3OHmEsRlL+EJc11dhg==
+payload@^0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/payload/-/payload-0.2.10.tgz#6ee2a1207d325ddf64b2b70cd7a7754665e13274"
+  integrity sha512-rVHQDvwkymO4XymuuhBEyM6W0F2Gog0KqhOJpOiOmw+QDOWX5jcfNBIPEA+zfjDu17h8jm/9FrVFGV723PL9UA==
   dependencies:
     "@babel/cli" "^7.12.8"
     "@babel/core" "^7.11.6"
