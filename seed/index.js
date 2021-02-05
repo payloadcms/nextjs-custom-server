@@ -1,4 +1,8 @@
 const payload = require('payload');
+const path = require('path');
+
+const home = require('./home.json');
+const sample = require('./sample.json');
 
 require('dotenv').config();
 
@@ -16,28 +20,25 @@ const createHomePage = async () => {
     data: {
       alt: 'Payload',
     },
-    req: {
-      file: 'test', // this should be a stream file read by FS
-    },
+    filePath: path.resolve(__dirname, './payload.jpg'),
   });
 
   const createdSamplePage = await payload.create({
     collection: 'pages',
-    data: {
-      // this should be the data for the sample page
-    },
+    data: sample,
   });
 
-  const createdPage = await payload.create({
+  const homeString = JSON.stringify(home)
+    .replaceAll('{{IMAGE_ID}}', createdMedia.id)
+    .replaceAll('{{SAMPLE_PAGE_ID}}', createdSamplePage.id);
+
+  await payload.create({
     collection: 'pages',
-    data: {
-      // data for homepage goes here, automatically use
-      // ID from the created media where applicable
-      // string template?
-    },
+    data: JSON.parse(homeString),
   });
 
-  process.exit(1);
+  console.log('Seed completed!');
+  process.exit(0);
 };
 
 createHomePage();
