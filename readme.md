@@ -6,6 +6,14 @@ When you use Payload, you plug it into _**your**_ Express server. That's a funda
 
 One of the strengths of this pattern is that it lets you do powerful things like combining your Payload CMS directly with a custom NextJS server. With this pattern, you can host your Payload CMS as well as a fully dynamic, CMS-integrated NextJS site right on one host—while still getting all of the benefits of a headless CMS.
 
+**This boilerplate demonstrates the following:**
+
+- How to build a TypeScript Payload + NextJS project
+- How to use Payload's Uploads via a Media collection
+- How to seed initial data into your database through Payload's Local API
+- How to build dynamic layouts in React using Payload's Blocks field type
+- How to use Payload field hooks to dynamically generate and format page `slug`s
+
 ## This pattern is great for the following situations:
 
 **1. If your content changes often, or is completely dynamic in nature.**
@@ -20,12 +28,6 @@ If you need to generate views that depend on user-generated data, or data that c
 
 Commonly, you might use Payload to build full applications - where certain views are statically generated, like pages and posts, but other views are fully dynamic and must be server-rendered—like an account portal or similar. If this describes your application, you can benefit by utilizing NextJS in both a server-rendered and statically generated context. At the same time, you'll benefit from running your Payload app completely within the same NextJS server.
 
-## Contents
-
-1. `Page` Collection with featured image, layout builder, and meta info
-1. `Media` Collection with `upload` support
-1. `Header` Global with navigation support
-
 ## Installation
 
 Here is a step-by-step guide for how to use this repo:
@@ -35,7 +37,7 @@ Here is a step-by-step guide for how to use this repo:
 1. Fill out your `.env` file with values that describe your environment
 1. Run `yarn` or `npm install`
 1. Run `yarn dev` to open a development environment
-1. *optional* Run `yarn seed` to add sample pages
+1. *optional* Run `yarn seed` to add sample pages and a Media upload
 1. Go to [http://localhost:3000/admin](http://localhost:3000/admin) to create your first user
 
 ## Building and serving in Production
@@ -44,3 +46,7 @@ This repo contains everything you need to both build your project for production
 
 - To build, run `yarn build` or `npm run build`.
 - To serve, run `yarn serve` or `npm run serve`.
+
+### This boilerplate is not for all NextJS projects
+
+We will be releasing more boilerplates over time, including one for pairing Payload with a statically generated NextJS site. If you don't need NextJS' server rendering, you should go fully static.
