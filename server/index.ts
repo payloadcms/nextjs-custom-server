@@ -11,9 +11,6 @@ dotenv({
   path: path.resolve(__dirname, '../.env'),
 });
 
-process.env.PAYLOAD_PUBLIC_SERVER_URL = process.env.SERVER_URL;
-process.env.NEXT_PUBLIC_SERVER_URL = process.env.SERVER_URL;
-
 const dev = process.env.NODE_ENV !== 'production';
 const server = express();
 
