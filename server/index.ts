@@ -14,6 +14,9 @@ dotenv({
 const dev = process.env.NODE_ENV !== 'production';
 const server = express();
 
+process.env.PAYLOAD_PUBLIC_SERVER_URL = process.env.SERVER_URL;
+process.env.NEXT_PUBLIC_SERVER_URL = process.env.SERVER_URL;
+
 payload.init({
   license: process.env.PAYLOAD_LICENSE,
   secret: process.env.PAYLOAD_SECRET_KEY,
