@@ -5,6 +5,8 @@ import Media from './collections/Media';
 
 dotenv.config();
 
+process.env.PAYLOAD_PUBLIC_SERVER_URL = process.env.SERVER_URL;
+
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   collections: [

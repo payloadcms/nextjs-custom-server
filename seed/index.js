@@ -7,7 +7,6 @@ const sample = require('./sample.json');
 require('dotenv').config();
 
 const { PAYLOAD_SECRET_KEY, MONGO_URL } = process.env;
-process.env.PAYLOAD_PUBLIC_SERVER_URL = process.env.SERVER_URL;
 
 payload.init({
   secret: PAYLOAD_SECRET_KEY,
