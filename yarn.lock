@@ -1509,10 +1509,10 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-base/-/context-base-0.14.0.tgz#c67fc20a4d891447ca1a855d7d70fa79a3533001"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
-"@payloadcms/config-provider@^0.0.21":
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/@payloadcms/config-provider/-/config-provider-0.0.21.tgz#9a8abe68cc9536a4037baa416ea215a7ab6ae2fd"
-  integrity sha512-jG6bvT7D+bVzmb6XpgLaA8cTM0YLxanR/owcPerxgdbmHxG6kj3/wXsb1O4welQfHV/1qJUHiQjdayats15Z1w==
+"@payloadcms/config-provider@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.npmjs.org/@payloadcms/config-provider/-/config-provider-0.0.22.tgz#40a31ba3e11e918d7146344ead6f05cf9bcc8f35"
+  integrity sha512-bTLy90BdQtywlxyrxoFztgmnWJEyNJxYG3KvMee/kztnv1KepP0KZnUD+Ead3yoWaeUbBEcVKE5itW16dGzLWw==
   dependencies:
     jwt-decode "^3.1.2"
 
@@ -9211,10 +9211,10 @@ pause@0.0.1:
   resolved "https://registry.yarnpkg.com/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
   integrity sha1-HUCLP9t2kjuVQ9lvtMnf1TXZy10=
 
-payload@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/payload/-/payload-0.4.2.tgz#5ca6bff081136279f41dd7f17cc2e1180946ed39"
-  integrity sha512-c/FYkmWTkNSEykP+HAjDt/hFOuyrxombEjbtMGVqgKrimm5EJWSkS9M/pldBm3lF8cKO0wis+LqR928dDHONbw==
+payload@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.npmjs.org/payload/-/payload-0.5.1.tgz#d3c20cd768aacb5ba92c6d067663353409d5b3c3"
+  integrity sha512-2S2L8GwbF1gDu/Kkf+GHHxCmnR1/n5wXhRuyPcAuWaKbIDLDM61O3hn1Jsz4ydUMgrsIfKDGQmGnksjwmbe6/g==
   dependencies:
     "@babel/cli" "^7.12.8"
     "@babel/core" "^7.11.6"
@@ -9230,7 +9230,7 @@ payload@^0.4.2:
     "@faceless-ui/modal" "^1.1.2"
     "@faceless-ui/scroll-info" "^1.2.3"
     "@faceless-ui/window-info" "^1.2.4"
-    "@payloadcms/config-provider" "^0.0.21"
+    "@payloadcms/config-provider" "^0.0.22"
     "@udecode/slate-plugins" "^0.71.9"
     assert "^2.0.0"
     async-some "^1.0.2"
