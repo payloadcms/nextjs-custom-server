@@ -9216,10 +9216,10 @@ pause@0.0.1:
   resolved "https://registry.yarnpkg.com/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
   integrity sha1-HUCLP9t2kjuVQ9lvtMnf1TXZy10=
 
-payload@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.npmjs.org/payload/-/payload-0.6.2.tgz#4119fc9c9dd01223c7486392018d684a29765e36"
-  integrity sha512-qy/JlBqGNXddAVp6ly75X2kCGyoeATHN7sKjh9+tkj3aRZ0hgibJACmm1LMz7JB6v+nDnjyV5CRJ+a5sKUnLLg==
+payload@^0.6.5:
+  version "0.6.5"
+  resolved "https://registry.npmjs.org/payload/-/payload-0.6.5.tgz#c07aa22e9eaa165ea37f02d2161ff23ebce7803d"
+  integrity sha512-THtGhjSWeBy5asdWy2Fm7wgnjCNBR/W6XfLAk3XdtpwbuuYT4g9flIo3M6KuOvbaC4pLHuNeE9XnNRFvEUmdFg==
   dependencies:
     "@babel/cli" "^7.12.8"
     "@babel/core" "^7.11.6"
