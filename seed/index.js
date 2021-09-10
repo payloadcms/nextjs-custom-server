@@ -29,8 +29,8 @@ const createHomePage = async () => {
   });
 
   const homeString = JSON.stringify(home)
-    .replaceAll('{{IMAGE_ID}}', createdMedia.id)
-    .replaceAll('{{SAMPLE_PAGE_ID}}', createdSamplePage.id);
+    .replace(/{{IMAGE_ID}}/g, createdMedia.id)
+    .replace(/{{SAMPLE_PAGE_ID}}/g, createdSamplePage.id);
 
   await payload.create({
     collection: 'pages',
