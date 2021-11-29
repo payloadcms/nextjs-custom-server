@@ -2,6 +2,8 @@ import { CollectionConfig } from 'payload/types';
 
 export type MediaType = {
   filename: string
+  width: number
+  height: number
   alt: string
   sizes: {
     card?: {
