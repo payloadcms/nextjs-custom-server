@@ -60,7 +60,7 @@ const Page: React.FC<Props> = (props) => {
 export default Page;
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const slug = ctx.params?.slug ? (ctx.params?.slug as string[]).join('/') : 'home';
+  const slug = ctx.params?.slug ? (ctx.params.slug as string[]).join('/') : 'home';
 
   const pageQuery = await payload.find({
     collection: 'pages',
