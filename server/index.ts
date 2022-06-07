@@ -15,7 +15,6 @@ const dev = process.env.NODE_ENV !== 'production';
 const server = express();
 
 payload.init({
-  license: process.env.PAYLOAD_LICENSE,
   secret: process.env.PAYLOAD_SECRET_KEY,
   mongoURL: process.env.MONGO_URL,
   express: server,

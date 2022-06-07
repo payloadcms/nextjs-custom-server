@@ -5,3 +5,4 @@ out
 build
 dist
 media/*
+yarn-error.log
