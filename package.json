@@ -28,7 +28,7 @@
     "payload": "^1.0.7",
     "react": "^18.1.0",
     "sass": "^1.52.0",
-    "slate": "^0.81.0",
+    "slate": "0.81.1",
     "typescript": "^4.7.0"
   },
   "devDependencies": {
