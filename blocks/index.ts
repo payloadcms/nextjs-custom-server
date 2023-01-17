@@ -1,6 +1,9 @@
-import { CallToAction, Component as cta } from './CallToAction';
-import { Content, Component as content } from './Content';
-import { Image, Component as image } from './Image';
+import { CallToAction } from './CallToAction';
+import { Component as cta } from './CallToAction/Component';
+import { Content } from './Content';
+import { Component as content } from './Content/Component';
+import { Image } from './Image';
+import { Component as image } from './Image/Component';
 
 export const collections = {
   CallToAction,
