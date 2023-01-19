@@ -23,10 +23,9 @@ export const Component: React.FC<Type> = (props) => {
                   <Link
                     href="[...slug]"
                     as={`/${button.page.slug}`}
+                    className={classes.button}
                   >
-                    <a className={classes.button}>
-                      {button.label}
-                    </a>
+                    {button.label}
                   </Link>
                 )}
                 {button.type === 'custom' && (

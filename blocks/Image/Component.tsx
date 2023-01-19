@@ -36,6 +36,8 @@ export const Component: React.FC<Type> = (props) => {
           sizes={sizesToUse}
           width={width}
           height={height}
+          style={{ objectFit: 'cover', height: 'auto' }}
+          priority
         />
         {caption && (
           <RichText

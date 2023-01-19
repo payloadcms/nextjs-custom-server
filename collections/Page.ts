@@ -8,6 +8,7 @@ import { Content, Type as ContentType } from '../blocks/Content';
 export type Layout = CallToActionType | ContentType | ImageType
 
 export type Type = {
+  id: string;
   title: string
   slug: string
   image?: MediaType
@@ -19,10 +20,13 @@ export type Type = {
   }
 }
 
+const appURL = process.env.PAYLOAD_PUBLIC_SERVER_URL;
+
 export const Page: CollectionConfig = {
   slug: 'pages',
   admin: {
     useAsTitle: 'title',
+    preview: ({ slug }) => `${appURL}/api/preview?url=${appURL}/${slug}`,
   },
   access: {
     read: (): boolean => true, // Everyone can read Pages

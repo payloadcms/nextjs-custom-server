@@ -20,12 +20,14 @@
     "serve": "cross-env NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
+    "@babel/core": "^7.20.12",
     "@babel/register": "^7.17.0",
     "dotenv": "^16.0.0",
     "escape-html": "^1.0.3",
     "express": "^4.18.0",
-    "next": "^12.1.0",
-    "payload": "^1.0.7",
+    "next": "^13.1.2",
+    "payload": "^1.5.9",
+    "payload-admin-bar": "^1.0.5",
     "react": "^18.1.0",
     "sass": "^1.52.0",
     "slate": "^0.72.8",
