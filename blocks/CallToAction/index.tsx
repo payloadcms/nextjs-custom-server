@@ -23,7 +23,7 @@ type Data = Record<string, unknown>;
 
 const customURLCondition = (_: Data, siblings: Data): boolean => siblings.type === 'custom';
 
-export const CallToAction: Block = {
+export const CallToActionConfig: Block = {
   slug: 'cta',
   labels: {
     singular: 'Call to Action',

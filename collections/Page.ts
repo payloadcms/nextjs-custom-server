@@ -1,9 +1,9 @@
 import { CollectionConfig } from 'payload/types';
 import { MediaType } from './Media';
 import formatSlug from '../utilities/formatSlug';
-import { Image, Type as ImageType } from '../blocks/Image';
-import { CallToAction, Type as CallToActionType } from '../blocks/CallToAction';
-import { Content, Type as ContentType } from '../blocks/Content';
+import { ImageConfig, Type as ImageType } from '../blocks/Image';
+import { CallToActionConfig, Type as CallToActionType } from '../blocks/CallToAction';
+import { ContentConfig, Type as ContentType } from '../blocks/Content';
 
 export type Layout = CallToActionType | ContentType | ImageType
 
@@ -50,9 +50,9 @@ export const Page: CollectionConfig = {
       type: 'blocks',
       minRows: 1,
       blocks: [
-        CallToAction,
-        Content,
-        Image,
+        CallToActionConfig,
+        ContentConfig,
+        ImageConfig,
       ],
     },
     {

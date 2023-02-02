@@ -3,7 +3,7 @@ import { Type } from '.';
 import RichText from '../../components/RichText';
 import classes from './index.module.css';
 
-export const Component: React.FC<Type> = (props) => {
+export const ContentComponent: React.FC<Type> = (props) => {
   const { content } = props;
 
   return (

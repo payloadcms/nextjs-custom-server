@@ -1,7 +1,4 @@
-import React from 'react';
 import { Block } from 'payload/types';
-import RichText from '../../components/RichText';
-import classes from './index.module.css';
 
 export type Type = {
   blockType: 'content'
@@ -9,7 +6,7 @@ export type Type = {
   content: unknown
 }
 
-export const Content: Block = {
+export const ContentConfig: Block = {
   slug: 'content',
   labels: {
     singular: 'Content',
@@ -22,18 +19,3 @@ export const Content: Block = {
     },
   ],
 };
-
-export const Component: React.FC<Type> = (props) => {
-  const { content } = props;
-
-  return (
-    <div className={classes.wrap}>
-      <RichText
-        content={content}
-        className={classes.content}
-      />
-    </div>
-  );
-};
-
-export default Content;

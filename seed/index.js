@@ -6,13 +6,15 @@ const sample = require('./sample.json');
 
 require('dotenv').config();
 
-const { PAYLOAD_SECRET_KEY, MONGO_URL } = process.env;
+const { PAYLOAD_SECRET, MONGODB_URI } = process.env;
 
-payload.init({
-  secret: PAYLOAD_SECRET_KEY,
-  mongoURL: MONGO_URL,
-  local: true,
-});
+const start = async () => {
+  await payload.init({
+    secret: PAYLOAD_SECRET,
+    mongoURL: MONGODB_URI,
+    local: true,
+  });
+};
 
 const createHomePage = async () => {
   const createdMedia = await payload.create({
@@ -41,4 +43,5 @@ const createHomePage = async () => {
   process.exit(0);
 };
 
+start();
 createHomePage();

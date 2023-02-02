@@ -12,7 +12,7 @@ export const sizes = [
   2560,
 ];
 
-export const Component: React.FC<Type> = (props) => {
+export const ImageComponent: React.FC<Type> = (props) => {
   const { image, type, caption } = props;
 
   if (typeof image === 'object') {

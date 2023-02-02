@@ -1,13 +1,14 @@
 import React, { useCallback } from 'react';
 import payload from 'payload';
 import { GetServerSideProps } from 'next';
-import { PayloadAdminBar, PayloadAdminBarProps } from 'payload-admin-bar';
+import { PayloadAdminBarProps } from 'payload-admin-bar';
 import { useRouter } from 'next/router';
 import { Type as PageType } from '../collections/Page';
 import NotFound from '../components/NotFound';
 import Head from '../components/Head';
 import classes from '../css/page.module.css';
 import RenderBlocks from '../components/RenderBlocks';
+import Header from '../components/Header';
 
 export type Props = {
   page?: PageType
@@ -42,25 +43,13 @@ const Page: React.FC<Props & PayloadAdminBarProps> = (props) => {
         description={page.meta?.description}
         keywords={page.meta?.keywords}
       />
-      <PayloadAdminBar
+      <Header
         id={page?.id}
-        cmsURL={appURL}
         collection="pages"
         onPreviewExit={onPreviewExit}
         preview={preview}
-        logo={(
-          <img
-            src="/payload.svg"
-            alt="Payload Logo"
-            width="20px"
-            height="20px"
-          />
-        )}
-        style={{
-          position: 'relative',
-          padding: '10px 5%',
-        }}
       />
+
       <div className={classes.page}>
         <header className={classes.header}>
           <h1>{page.title}</h1>

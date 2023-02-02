@@ -9,7 +9,7 @@ export type Type = {
   type: 'normal' | 'wide' | 'fullscreen'
 }
 
-export const Image: Block = {
+export const ImageConfig: Block = {
   slug: 'image',
   labels: {
     singular: 'Image',
