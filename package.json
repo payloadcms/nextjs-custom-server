@@ -16,7 +16,6 @@
     "build:payload": "payload build",
     "build": "cross-env NODE_ENV=production yarn build:payload && yarn build:server && cross-env NEXT_BUILD=true node dist/index.js",
     "dev": "node dev.js",
-    "seed": "node seed/index.js",
     "serve": "cross-env NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
