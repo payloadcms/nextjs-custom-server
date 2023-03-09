@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "jsx": "preserve",
     "target": "es5",
     "lib": [
       "dom",
@@ -13,19 +12,26 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "module": "esnext",
+    "incremental": true,
+    "jsx": "preserve",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "incremental": true
+    "isolatedModules": true
   },
   "include": [
     "next-env.d.ts",
+    "server.ts",
+    "payload.config.ts",
     "**/*.ts",
     "**/*.tsx",
-    "blocks/Image/sizes.js"
+    "next.config.js"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "swc": true
+  }
 }

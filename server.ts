@@ -6,7 +6,7 @@ import payload from 'payload';
 import { config as dotenv } from 'dotenv';
 
 dotenv({
-  path: path.resolve(__dirname, '../.env'),
+  path: path.resolve(__dirname, '.env'),
 });
 
 const dev = process.env.NODE_ENV !== 'production';
