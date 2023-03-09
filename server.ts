@@ -13,16 +13,11 @@ const dev = process.env.NODE_ENV !== 'production';
 const server = express();
 
 const start = async () => {
-  try {
-    await payload.init({
-      secret: process.env.PAYLOAD_SECRET_KEY,
-      mongoURL: process.env.MONGO_URL,
-      express: server,
-    });
-    console.log('Payload CMS started');
-  } catch (e) {
-    console.error('Error starting Payload CMS', e);
-  }
+  await payload.init({
+    secret: process.env.PAYLOAD_SECRET_KEY,
+    mongoURL: process.env.MONGO_URL,
+    express: server,
+  });
 
   if (!process.env.NEXT_BUILD) {
     const nextApp = next({ dev });
