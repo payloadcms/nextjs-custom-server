@@ -8,13 +8,13 @@ require('dotenv').config();
 
 const { PAYLOAD_SECRET_KEY, MONGO_URL } = process.env;
 
-payload.init({
-  secret: PAYLOAD_SECRET_KEY,
-  mongoURL: MONGO_URL,
-  local: true,
-});
-
 const createHomePage = async () => {
+  await payload.init({
+    secret: PAYLOAD_SECRET_KEY,
+    mongoURL: MONGO_URL,
+    local: true,
+  });
+
   const createdMedia = await payload.create({
     collection: 'media',
     data: {
