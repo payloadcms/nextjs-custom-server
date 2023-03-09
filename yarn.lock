@@ -5053,10 +5053,10 @@ pause@0.0.1:
   resolved "https://registry.npmjs.org/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
   integrity sha1-HUCLP9t2kjuVQ9lvtMnf1TXZy10=
 
-payload@^1.6.16:
-  version "1.6.16"
-  resolved "https://registry.yarnpkg.com/payload/-/payload-1.6.16.tgz#d72fa3001df6e4136a0bb2b24d3752615611dab9"
-  integrity sha512-qKD9NiL4YVwcMxqvw2R8cZ2bREd8cDRHYUQurmdXjVnfxrv9cgZGMXXCN1boEgrrVzhMQkkbg4cdxPUrLwEWDw==
+payload@^1.6.19:
+  version "1.6.19"
+  resolved "https://registry.yarnpkg.com/payload/-/payload-1.6.19.tgz#bc0d2535951b3af9d5de2f0d3af9227c495c0079"
+  integrity sha512-zMAir4EjVjQFD1jEaZXIBp6lqi9WJnaNy8It9L3a38PCj+pEsOH+QJwiUbtnkm5S1sWK4EX5i6u2bSL4+veLGA==
   dependencies:
     "@date-io/date-fns" "^2.16.0"
     "@dnd-kit/core" "^6.0.7"
