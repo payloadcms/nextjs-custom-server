@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { sizes } = require('./blocks/Image/sizes');
+const { sizes } = require('./blocks/Image/sizes.json');
 
 module.exports = {
   publicRuntimeConfig: {

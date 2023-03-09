@@ -1,9 +1,13 @@
 import { CollectionConfig } from 'payload/types';
 import { MediaType } from './Media';
 import formatSlug from '../utilities/formatSlug';
-import { Image, Type as ImageType } from '../blocks/Image';
-import { CallToAction, Type as CallToActionType } from '../blocks/CallToAction';
-import { Content, Type as ContentType } from '../blocks/Content';
+import { Image } from '../blocks/Image/Config';
+import { Type as ImageType } from '../blocks/Image/Component';
+import { CallToAction } from '../blocks/CallToAction/Config';
+import { Type as CallToActionType } from '../blocks/CallToAction/Component';
+import { Content } from '../blocks/Content/Config';
+import { Type as ContentType } from '../blocks/Content/Component';
+
 
 export type Layout = CallToActionType | ContentType | ImageType
 
