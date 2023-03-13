@@ -17,7 +17,7 @@
     "build": "cross-env NODE_ENV=production yarn build:payload && yarn build:server && yarn serve",
     "dev": "ts-node server.ts",
     "seed": "ts-node seed/index.js",
-    "serve": "cross-env NODE_ENV=production PAYLOAD_CONFIG_PATH=dist/payload.config.js node dist/index.js"
+    "serve": "cross-env NODE_ENV=production PAYLOAD_CONFIG_PATH=dist/payload.config.js node dist/server.js"
   },
   "dependencies": {
     "dotenv": "^16.0.0",

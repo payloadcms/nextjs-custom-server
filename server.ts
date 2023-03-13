@@ -5,9 +5,7 @@ import express from 'express';
 import payload from 'payload';
 import { config as dotenv } from 'dotenv';
 
-dotenv({
-  path: path.resolve(__dirname, '.env'),
-});
+dotenv();
 
 const dev = process.env.NODE_ENV !== 'production';
 const server = express();
