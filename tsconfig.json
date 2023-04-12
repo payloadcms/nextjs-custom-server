@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -14,10 +14,11 @@
     "noEmit": true,
     "incremental": true,
     "jsx": "preserve",
-    "module": "CommonJS",
+    "module": "commonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true
+
   },
   "include": [
     "next-env.d.ts",

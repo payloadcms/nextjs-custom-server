@@ -1,7 +1,6 @@
 import React from 'react';
 import { Layout } from '../../collections/Page';
 import { components } from '../../blocks';
-import classes from './index.module.css';
 
 type Props = {
   layout: Layout[]
@@ -10,7 +9,6 @@ type Props = {
 
 const RenderBlocks: React.FC<Props> = ({ layout, className }) => (
   <div className={[
-    classes.renderBlocks,
     className,
   ].filter(Boolean).join(' ')}
   >
@@ -21,7 +19,6 @@ const RenderBlocks: React.FC<Props> = ({ layout, className }) => (
         return (
           <section
             key={i}
-            className={classes.block}
           >
             <Block {...block} />
           </section>

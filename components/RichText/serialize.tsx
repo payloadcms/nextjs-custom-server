@@ -1,22 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { Fragment } from 'react';
 import escapeHTML from 'escape-html';
 import { Text } from 'slate';
+import RedHeadline from './leaves/RedHeadline/Component';
+import RedUnderline from './leaves/RedUnderline/Component';
 
-// eslint-disable-next-line no-use-before-define
-type Children = Leaf[]
-
-type Leaf = {
-  type: string
-  value?: {
-    url: string
-    alt: string
-  }
-  children?: Children
-  url?: string
-  [key: string]: unknown
-}
-
-const serialize = (children: Children): React.ReactElement[] => children.map((node, i) => {
+const serialize = (children: any): React.ReactElement[] => children.map((node, i) => {
   if (Text.isText(node)) {
     let text = <span dangerouslySetInnerHTML={{ __html: escapeHTML(node.text) }} />;
 
@@ -25,6 +14,22 @@ const serialize = (children: Children): React.ReactElement[] => children.map((no
         <strong key={i}>
           {text}
         </strong>
+      );
+    }
+
+    if (node['red-headline']) {
+      text = (
+        <RedHeadline>
+          {text}
+        </RedHeadline>
+      );
+    }
+
+    if (node['red-underline']) {
+      text = (
+        <RedUnderline>
+          {text}
+        </RedUnderline>
       );
     }
 
@@ -146,6 +151,11 @@ const serialize = (children: Children): React.ReactElement[] => children.map((no
         >
           {serialize(node.children)}
         </a>
+      );
+
+    case 'hr':
+      return (
+        <hr key={i} />
       );
 
     default:

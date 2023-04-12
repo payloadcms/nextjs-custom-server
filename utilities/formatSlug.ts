@@ -1,6 +1,6 @@
 import { FieldHook } from 'payload/types';
 
-const format = (val: string): string => val.replace(/ /g, '-').replace(/[^\w-/]+/g, '').toLowerCase();
+const format = (val: string): string => val.replace(/ /g, '-').replace(/[^\w-]+/g, '').toLowerCase();
 
 const formatSlug = (fallback: string): FieldHook => ({ value, originalDoc, data }) => {
   if (typeof value === 'string') {
