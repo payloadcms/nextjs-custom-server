@@ -1,14 +1,13 @@
 import { Block } from 'payload/types';
+import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
+import overlap, { Type as OverlapType } from '../../fields/overlap';
 import stat, { Type as StatType } from '../../fields/stat';
 
-type Sizes = 'none' | 'small' | 'medium' | 'large';
-
 export type Type = {
-  topOverlap: Sizes
-  bottomOverlap: Sizes
   stats: StatType[]
+  backgroundColor: BackgroundColorType
   blockType: 'statistics'
-}
+} & OverlapType
 
 const Statistics: Block = {
   slug: 'statistics',
@@ -17,65 +16,8 @@ const Statistics: Block = {
     plural: 'Statistic Blocks',
   },
   fields: [
-    {
-      type: 'row',
-      fields: [
-        {
-          name: 'topOverlap',
-          label: 'Top Overlap',
-          type: 'select',
-          defaultValue: 'none',
-          options: [
-            {
-              label: 'None',
-              value: 'none',
-            },
-            {
-              label: 'Small',
-              value: 'small',
-            },
-            {
-              label: 'Medium',
-              value: 'medium',
-            },
-            {
-              label: 'Large',
-              value: 'large',
-            },
-          ],
-          admin: {
-            width: '50%',
-          },
-        },
-        {
-          name: 'bottomOverlap',
-          label: 'Bottom Overlap',
-          type: 'select',
-          defaultValue: 'none',
-          options: [
-            {
-              label: 'None',
-              value: 'none',
-            },
-            {
-              label: 'Small',
-              value: 'small',
-            },
-            {
-              label: 'Medium',
-              value: 'medium',
-            },
-            {
-              label: 'Large',
-              value: 'large',
-            },
-          ],
-          admin: {
-            width: '50%',
-          },
-        },
-      ],
-    },
+    backgroundColor,
+    overlap,
     {
       name: 'stats',
       label: 'Statistics',

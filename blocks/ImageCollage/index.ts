@@ -1,32 +1,32 @@
 import { Block } from 'payload/types';
-import { Type as MediaType } from '../../collections/Media';
+import { Type as ImageType } from '../../collections/Media';
 
 export type Image = {
-  image: MediaType
+  Image: ImageType
 }
 
 export type Type = {
-  images: Image[]
-  blockType: 'image-collage'
+  Image: Image[]
+  blockType: 'Image-collage'
 }
 
 const ImageCollage: Block = {
-  slug: 'image-collage',
+  slug: 'Image-collage',
   labels: {
     singular: 'Image Collage',
     plural: 'Image Collages',
   },
   fields: [
     {
-      name: 'images',
-      label: 'Images',
+      name: 'Image',
+      label: 'Image',
       type: 'array',
       minRows: 3,
-      maxRows: 6,
+      maxRows: 3,
       fields: [
         {
           type: 'upload',
-          name: 'image',
+          name: 'Image',
           relationTo: 'media',
           required: true,
         },

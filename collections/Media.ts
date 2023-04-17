@@ -1,19 +1,22 @@
 import { CollectionConfig } from 'payload/types';
 
+export type SizeDetails = {
+  filename: string
+  width: number
+  height: number
+}
+
+export type Size = 'card' | 'square' | 'portrait' | 'feature';
+
 export type Type = {
   filename: string
   alt: string
+  mimeType: string
   sizes: {
-    card?: {
-      filename: string
-      width: number
-      height: number
-    }
-    feature?: {
-      filename: string
-      width: number
-      height: number
-    }
+    card?: SizeDetails
+    square?: SizeDetails
+    portrait?: SizeDetails
+    feature?: SizeDetails
   }
 }
 
@@ -22,6 +25,9 @@ const Media: CollectionConfig = {
   access: {
     read: (): boolean => true, // Everyone can read Media
   },
+  admin: {
+    useAsTitle: 'filename',
+  },
   upload: {
     adminThumbnail: 'card',
     imageSizes: [
@@ -29,6 +35,16 @@ const Media: CollectionConfig = {
         name: 'card',
         width: 640,
         height: 480,
+      },
+      {
+        name: 'portrait',
+        width: 768,
+        height: 1024,
+      },
+      {
+        name: 'square',
+        width: 1200,
+        height: 1200,
       },
       {
         name: 'feature',

@@ -57,10 +57,10 @@ const Footer: React.FC<Props> = ({ footer, socialMedia }) => {
             <div className={classes.section}>
               <p style={{ margin: 0 }}>
                 <a
-                  href="mailto:info@customwebsiteseries.com"
+                  href="nem@nem-insurance.com"
                   className={classes.link}
                 >
-                  info@customwebsiteseries.com
+                  nem@nem-insurance.com
                 </a>
               </p>
             </div>
@@ -72,9 +72,9 @@ const Footer: React.FC<Props> = ({ footer, socialMedia }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  123 Address Goes Here,
+                  NEM insurance PLC 199,
                   <br />
-                  Grand Rapids, MI 49504
+                  Ikorodu road, Obanikoro, Lagos
                 </a>
               </p>
             </div>
@@ -82,11 +82,21 @@ const Footer: React.FC<Props> = ({ footer, socialMedia }) => {
               <p style={{ margin: 0 }}>
                 <a
                   className={classes.link}
-                  href="tel:616123456"
+                  href="tel:234-1-4489560"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  616-123-4567
+                 234-1-4489560
+                </a>
+              </p>
+              <p style={{ margin: 0 }}>
+                <a
+                  className={classes.link}
+                  href="tel:234-1-4489570"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  234-1-4489570
                 </a>
               </p>
             </div>

@@ -41,7 +41,7 @@ const Header: React.FC<Props> = ({ megaMenu, socialMedia }) => {
         <GridContainer>
           <Grid className={classes.navLinks}>
             <Cell
-              cols={5}
+              cols={7}
               htmlElement="nav"
             >
               {megaMenu?.nav?.map(({ link }, i) => (

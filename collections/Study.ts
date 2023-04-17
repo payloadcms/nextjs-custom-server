@@ -43,10 +43,17 @@ export type Type = {
   categories?: CategoryType[]
   slug: string
   meta: MetaType
+  layout: Layout[]
 }
 
 const Study: CollectionConfig = {
   slug: 'studies',
+  admin: {
+    useAsTitle: 'title',
+  },
+  access: {
+    read: (): boolean => true, // Everyone can read Pages
+  },
   fields: [
     {
       name: 'title',
@@ -84,6 +91,10 @@ const Study: CollectionConfig = {
     {
       name: 'previewImages',
       label: 'Preview Images',
+      labels: {
+        singular: 'Image',
+        plural: 'Image',
+      },
       type: 'array',
       minRows: 1,
       maxRows: 3,

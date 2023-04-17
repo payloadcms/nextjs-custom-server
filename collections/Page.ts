@@ -3,7 +3,7 @@ import { Type as MediaType } from './Media';
 import slug from '../fields/slug';
 import meta, { Type as MetaType } from '../fields/meta';
 import { Content, Type as ContentType } from '../blocks/Content';
-import { Image, Type as ImageType } from '../blocks/Image';
+import { Image, Type as ImageBlockType } from '../blocks/Image';
 import Statistics, { Type as StatisticsType } from '../blocks/Statistics';
 import Spacer, { Type as SpacerType } from '../blocks/Spacer';
 import ImageContentCollage, { Type as ImageContentCollageType } from '../blocks/ImageContentCollage';
@@ -15,32 +15,36 @@ import ImageGrid, { Type as ImageGridType } from '../blocks/ImageGrid';
 import ImageCollage, { Type as ImageCollageType } from '../blocks/ImageCollage';
 import StudySlider, { Type as StudySliderType } from '../blocks/StudySlider';
 import CTAGrid, { Type as CTAGridType } from '../blocks/CTAGrid';
+import RedHeadline from '../components/RichText/leaves/RedHeadline';
+import RedUnderline from '../components/RichText/leaves/RedUnderline';
 
 export type Layout =
-  CallToActionType
-  | ContentType
-  | CTAGridType
-  | ImageType
-  | ImageCollageType
-  | ImageContentCollageType
-  | ImageGridType
-  | ImageStatCollageType
-  | SliderType
-  | SpacerType
-  | StatisticsType
-  | StickyContentType
-  | StudySliderType
+CallToActionType
+| ContentType
+| CTAGridType
+| ImageBlockType
+| ImageCollageType
+| ImageContentCollageType
+| ImageGridType
+| ImageStatCollageType
+| SliderType
+| SpacerType
+| StatisticsType
+| StickyContentType
+| StudySliderType
 
-export type Type = {
-  title: string
-  heroType: 'minimal' | 'contentAboveImage' | 'contentLeftOfImage'
-  heroContent: unknown
-  heroImage?: MediaType
-  slug: string
-  image?: MediaType
-  layout: Layout[]
-  meta: MetaType
-}
+export type HeroType = 'minimal' | 'contentAboveImage' | 'contentLeftOfImage'
+
+  export type Type = {
+    title: string
+    heroType: 'minimal' | 'contentAboveImage' | 'contentLeftOfImage'
+    heroContent: unknown
+    heroImage?: MediaType
+    slug: string
+    image?: MediaType
+    layout: Layout[]
+    meta: MetaType
+  }
 
 export const Page: CollectionConfig = {
   slug: 'pages',
@@ -83,6 +87,12 @@ export const Page: CollectionConfig = {
       label: 'Hero Content',
       type: 'richText',
       required: true,
+      admin:{
+        leaves:[
+          RedHeadline,
+          RedUnderline,
+        ]
+      }
     },
     {
       name: 'heroImage',

@@ -1,20 +1,21 @@
 import { Block } from 'payload/types';
-import { Type as MediaType } from '../../collections/Media';
+import { Type as ImageType } from '../../collections/Media';
 import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
 
 export type Image = {
-  image: MediaType
+  Image: ImageType
   content?: string
 }
 
 export type Type = {
   backgroundColor: BackgroundColorType
-  images: Image[]
-  blockType: 'image-grid'
+  content?: unknown
+  Image: Image[]
+  blockType: 'Image-grid'
 }
 
 const ImageGrid: Block = {
-  slug: 'image-grid',
+  slug: 'Image-grid',
   labels: {
     singular: 'Image Grid',
     plural: 'Image Grids',
@@ -27,15 +28,15 @@ const ImageGrid: Block = {
       type: 'richText',
     },
     {
-      name: 'images',
-      label: 'Images',
+      name: 'Image',
+      label: 'Image',
       type: 'array',
       minRows: 3,
       maxRows: 12,
       fields: [
         {
           type: 'upload',
-          name: 'image',
+          name: 'Image',
           relationTo: 'media',
           required: true,
         },

@@ -1,24 +1,26 @@
 import { Block } from 'payload/types';
-import { Type as MediaType } from '../../collections/Media';
+import { Type as ImageType } from '../../collections/Media';
+import overlap, { Type as OverlapType } from '../../fields/overlap';
 import stat, { Type as StatType } from '../../fields/stat';
 
-export type Image = {
-  image: MediaType
-}
-
 export type Type = {
-  images: Image[]
-  stats: StatType[]
-  blockType: 'image-stat-collage'
-}
+  Image: {
+    Image: ImageType
+  }
+  stats: {
+    stat: StatType[]
+  }
+  blockType: 'Image-stat-collage'
+} & OverlapType
 
 const ImageStatCollage: Block = {
-  slug: 'image-stat-collage',
+  slug: 'Image-stat-collage',
   labels: {
     singular: 'Image Stat Collage',
     plural: 'Image Stat Collages',
   },
   fields: [
+    overlap,
     {
       name: 'stats',
       label: 'Statistics',
@@ -30,15 +32,15 @@ const ImageStatCollage: Block = {
       ],
     },
     {
-      name: 'images',
-      label: 'Images',
+      name: 'Image',
+      label: 'Image',
       type: 'array',
       minRows: 3,
-      maxRows: 6,
+      maxRows: 4,
       fields: [
         {
           type: 'upload',
-          name: 'image',
+          name: 'Image',
           relationTo: 'media',
           required: true,
         },

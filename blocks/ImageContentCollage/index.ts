@@ -1,10 +1,10 @@
 import { Block } from 'payload/types';
 import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
 import link, { Type as LinkType } from '../../fields/link';
-import { Type as MediaType } from '../../collections/Media';
+import { Type as Imagetype } from '../../collections/Media';
 
 export type Image = {
-  image: MediaType
+  Image: Imagetype
 }
 
 export type Type = {
@@ -12,12 +12,12 @@ export type Type = {
   content: unknown
   enableCTA: boolean
   link: LinkType
-  images: Image[]
-  blockType: 'image-content-collage'
+  Image: Image[]
+  blockType: 'Image-content-collage'
 }
 
 const ImageContentCollage: Block = {
-  slug: 'image-content-collage',
+  slug: 'Image-content-collage',
   labels: {
     singular: 'Image Content Collage',
     plural: 'Image Content Collages',
@@ -38,19 +38,19 @@ const ImageContentCollage: Block = {
     {
       ...link,
       admin: {
-        condition: (_, siblingData) => siblingData.enableCTA,
+        condition: (_, siblingData) => Boolean(siblingData.enableCTA),
       },
     },
     {
-      name: 'images',
-      label: 'Images',
+      name: 'Image',
+      label: 'Image',
       type: 'array',
       minRows: 3,
       maxRows: 6,
       fields: [
         {
           type: 'upload',
-          name: 'image',
+          name: 'Image',
           relationTo: 'media',
           required: true,
         },

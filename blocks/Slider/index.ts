@@ -2,13 +2,13 @@ import { Block } from 'payload/types';
 import backgroundColor, { Type as BackgroundColorType } from '../../fields/backgroundColor';
 import { Type as MediaType } from '../../collections/Media';
 
-export type Image = {
-  image: MediaType
+export type Slide = {
+  media: MediaType
 }
 
 export type Type = {
   backgroundColor: BackgroundColorType
-  images: Image[]
+  slides: Slide[]
   blockType: 'slider'
 }
 
@@ -21,15 +21,19 @@ const Slider: Block = {
   fields: [
     backgroundColor,
     {
-      name: 'images',
-      label: 'Images',
+      name: 'slides',
+      label: 'Slides',
+      labels: {
+        singular: 'Slide',
+        plural: 'Slides',
+      },
       type: 'array',
       minRows: 3,
       maxRows: 9,
       fields: [
         {
           type: 'upload',
-          name: 'image',
+          name: 'media',
           relationTo: 'media',
           required: true,
         },

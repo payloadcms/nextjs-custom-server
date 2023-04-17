@@ -1,7 +1,7 @@
 import { buildConfig } from 'payload/config';
 import dotenv from 'dotenv';
 import Page from './collections/Page';
-import Medias from './collections/Media';
+import Media from './collections/Media';
 import FormSubmission from './collections/FormSubmission';
 import Study from './collections/Study';
 import Category from './collections/Category';
@@ -18,7 +18,7 @@ export default buildConfig({
     Page,
     Study,
     Category,
-    Medias,
+    Media,
     FormSubmission,
   ],
   globals: [

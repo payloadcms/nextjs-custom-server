@@ -1,11 +1,14 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { Editor } from 'slate';
+import { Editor, Element } from 'slate';
+
+interface HR extends Element {
+  type: 'hr';
+}
 
 const withHR = (incomingEditor: Editor): Editor => {
   const editor = incomingEditor;
   const { isVoid } = editor;
 
-  editor.isVoid = (element) => (element.type === 'hr' ? true : isVoid(element));
+  editor.isVoid = (element: HR) => (element.type === 'hr' ? true : isVoid(element));
 
   return editor;
 };

@@ -5,15 +5,17 @@ import express from 'express';
 import payload from 'payload';
 import { config as dotenv } from 'dotenv';
 
-dotenv();
+dotenv({
+  path: path.resolve(__dirname, './.env'),
+});
 
 const dev = process.env.NODE_ENV !== 'production';
 const server = express();
 
 const start = async () => {
   await payload.init({
-    secret: process.env.PAYLOAD_SECRET,
-    mongoURL: process.env.MONGODB_URI,
+    secret: process.env.PAYLOAD_SECRET_KEY,
+    mongoURL: process.env.MONGO_URL,
     express: server,
   });
 

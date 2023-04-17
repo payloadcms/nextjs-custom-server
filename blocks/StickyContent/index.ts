@@ -2,7 +2,7 @@ import { Block } from 'payload/types';
 
 export type Section = {
   label: string
-  description: unknown
+  description: string
 }
 
 export type Type = {

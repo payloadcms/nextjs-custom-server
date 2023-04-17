@@ -85,7 +85,7 @@ export default createUseStyles({
     textDecoration: 'none',
     '&:hover': {
       transition: `all ${transitions.default}ms linear`,
-      color: colors.blue,
+      color: colors.yellow,
     },
   },
   secondaryNavItem: {

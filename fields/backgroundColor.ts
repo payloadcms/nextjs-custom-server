@@ -1,6 +1,6 @@
 import { Field } from 'payload/types';
 
-export type Type = 'orange' | 'red' | 'none' | 'blue';
+export type Type = 'orange' | 'red' | 'none' | 'blue' | 'gray';
 
 const backgroundColor: Field = {
   name: 'backgroundColor',

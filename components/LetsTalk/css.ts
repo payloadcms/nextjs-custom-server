@@ -14,8 +14,8 @@ export default createUseStyles({
   },
   wrap: {
     position: 'relative',
-    width: base(25),
-    height: base(25),
+    width: base(20),
+    height: base(20),
     overflow: 'hidden',
   },
   graphic: ({ isHovered }) => ({
