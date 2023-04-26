@@ -3,7 +3,8 @@ import colors from '../../../../../css/colors';
 
 export default createUseStyles({
   redHeadline: {
-    color: colors.red,
+    color: colors.white,
     textTransform: 'uppercase',
+    fontWeight:'700'
   },
 });

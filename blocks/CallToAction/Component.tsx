@@ -52,6 +52,7 @@ const CallToAction: React.FC<Type> = ({
           ))}
         </ul>
       </GridContainer>
+      
     </div>
   );
 };

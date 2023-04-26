@@ -1,13 +1,13 @@
 import React from 'react';
-import { Type as ImageType, Size } from '../../collections/Media';
+import { Type as MediaType, Size } from '../../collections/Media';
 import useStyles from './css';
 
-type Props = ImageType & {
+type Props = MediaType & {
   className?: string
   preferredSize?: Size
 }
 
-const Image: React.FC<Props> = ({
+const Media: React.FC<Props> = ({
   className,
   mimeType,
   filename,
@@ -44,4 +44,4 @@ const Image: React.FC<Props> = ({
   );
 };
 
-export default Image;
+export default Media;

@@ -59,9 +59,9 @@ const SliderOnBackground: React.FC<Props> = ({ backgroundColor, slides }) => {
               <Slider hideScrollbar>
                 {slides.map((slide, i) => (
                   <div
-                    style={{
-                      marginLeft: i === 0 ? sliderLeftPadding : undefined,
-                    }}
+                    // style={{
+                    //   marginLeft: i === 0 ? sliderLeftPadding : undefined,
+                    // }}
                     key={i}
                   >
                     {slide}

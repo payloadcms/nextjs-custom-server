@@ -27,13 +27,18 @@ const ContentLeftOfMediaPageHero: React.FC<Props> = ({ title, content, image }) 
               <p className={classes.title}>
                 {title}
               </p>
+      
+
               <RichText
                 className={classes.richText}
                 content={content}
               />
+               <button className={classes.button}>Get started</button>
             </div>
           </Cell>
         </Grid>
+     
+
       </GridContainer>
       <div className={classes.media}>
         <Image {...image} />

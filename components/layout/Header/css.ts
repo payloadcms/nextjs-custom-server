@@ -83,6 +83,8 @@ export default createUseStyles({
   primaryNavItem: {
     color: colors.antique,
     textDecoration: 'none',
+    fontFamily: 'Kanit, sans-serif',
+    fonFamily: 'Roboto, sans-serif',
     '&:hover': {
       transition: `all ${transitions.default}ms linear`,
       color: colors.yellow,

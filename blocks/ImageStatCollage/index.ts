@@ -4,8 +4,8 @@ import overlap, { Type as OverlapType } from '../../fields/overlap';
 import stat, { Type as StatType } from '../../fields/stat';
 
 export type Type = {
-  Image: {
-    Image: ImageType
+  media: {
+    media: ImageType
   }
   stats: {
     stat: StatType[]

@@ -24,8 +24,10 @@ export default createUseStyles({
 
   },
   slider: {
-    paddingTop: large,
+    // paddingTop: large,
     paddingBottom: medium,
+    paddingLeft:small,
+    paddingRight:small,
     position: 'relative',
     [queries.m]: {
       paddingTop: medium,

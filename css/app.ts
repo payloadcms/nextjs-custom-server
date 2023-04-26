@@ -48,7 +48,8 @@ export default createUseStyles({
       fontFamily,
       fontSize: htmlFontSize,
       lineHeight: `${baselinePX}px`,
-      backgroundColor: colors.antique,
+      backgroundColor: colors.white,
+      overflowX:'hidden',
       [queries.m]: {
         fontSize: htmlFontSize * 0.75,
       },

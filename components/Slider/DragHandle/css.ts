@@ -9,7 +9,9 @@ export default createUseStyles({
     width: '100%',
     height: '100%',
     top: 0,
+    zIndex:'3',
     pointerEvents: 'none',
+
   },
   handle: {
     backgroundColor: colors.antique,
@@ -21,6 +23,7 @@ export default createUseStyles({
     transform: 'translate3d(-50%, -50%, 0) scale(.1)',
     pointerEvents: 'none',
     color: colors.gray,
+    zIndex:2,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

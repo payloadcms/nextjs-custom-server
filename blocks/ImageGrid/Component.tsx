@@ -8,6 +8,7 @@ import Gutter from '../../components/layout/Gutter';
 import RichText from '../../components/RichText';
 import { Type } from '.';
 import useStyles from './css';
+import Link from '../../components/Link';
 import Parallax from '../../components/Parallax';
 import Media from '../../components/Media';
 import mediaProps from './mediaProps';
@@ -15,6 +16,7 @@ import mediaProps from './mediaProps';
 const ImageGrid: React.FC<Type> = ({
   backgroundColor,
   content,
+  content2,
   Image,
 }) => {
   const classes = useStyles();
@@ -46,7 +48,7 @@ const ImageGrid: React.FC<Type> = ({
         </Gutter>
         <GridContainer>
           <Grid>
-            {Image?.map(({ Image: ImageFile, content: ImageContent }, i) => {
+            {Image?.map(({ link,Image: ImageFile , content: ImageContent, content2: ImageContent2  }, i) => {
               const { yDistance } = mediaProps[i][largeBreak ? 'm' : 'l'];
               const { top } = mediaProps[i][largeBreak ? 'm' : 'l'];
 
@@ -55,21 +57,33 @@ const ImageGrid: React.FC<Type> = ({
                   key={i}
                   cols={4}
                 >
+              <Link
+                {...link}
+                className={classes.link}
+              >
                   <Parallax yDistance={yDistance}>
                     <div
                       className={classes.mediaWrap}
                       style={{ position: 'relative', top }}
                     >
+
                       <Media
                         {...ImageFile}
                         preferredSize="portrait"
+
                       />
+                
                       <div
                         className={classes.content}
                         dangerouslySetInnerHTML={{ __html: ImageContent }}
                       />
+                       <div
+                        className={classes.content2}
+                        dangerouslySetInnerHTML={{ __html: ImageContent2 }}
+                      />
                     </div>
                   </Parallax>
+                  </Link>
                 </Cell>
               );
             })}

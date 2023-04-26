@@ -61,6 +61,7 @@ export default createUseStyles({
   labels: {
     listStyle: 'none',
     margin: `${labelHeight} 0`,
+    color:colors.yellow,
     padding: 0,
     transition: `transform ${transitions.default}ms ease-in-out`,
   },
@@ -70,6 +71,7 @@ export default createUseStyles({
     height: labelHeight,
     display: 'flex',
     alignItems: 'center',
+    color:colors.yellow,
     opacity: 0.3,
     transition: `opacity ${transitions.default}ms linear`,
     hyphens: 'auto',
@@ -97,6 +99,7 @@ export default createUseStyles({
     width: base(2),
     height: strokeWidth,
     border: 0,
+    color:colors.yellow,
     backgroundColor: colors.gray,
   },
   description: {

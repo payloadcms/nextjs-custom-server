@@ -119,7 +119,7 @@ const Footer: React.FC<Props> = ({ footer, socialMedia }) => {
               {' '}
               {new Date().getFullYear()}
               {' '}
-              Custom Website Series
+              NEM health HMO
             </p>
           </Cell>
         </Grid>

@@ -25,7 +25,7 @@ const CallToAction: Block = {
       name: 'content',
       type: 'richText',
       label: 'Content',
-      required: true,
+      required: false,
     },
     {
       name: 'actions',

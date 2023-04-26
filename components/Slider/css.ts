@@ -6,6 +6,7 @@ export default createUseStyles({
   },
   slider: {
     overflowX: 'scroll',
+    overflowY:'hidden',
     '-webkit-overflow-scrolling': 'touch',
     display: 'flex',
     '@global': {

@@ -73,6 +73,7 @@ const MyApp = (appProps: AppProps): React.ReactElement => {
                 xl: `(max-width: ${breakpoints.xl}px)`,
               }}
       >
+        
         <ModalProvider
           zIndex={zIndex.modal}
           classPrefix="payload"

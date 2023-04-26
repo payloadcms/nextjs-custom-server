@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import colors from '../../../../../css/colors';
 import queries from '../../../../../css/queries';
+import { TextTransforms } from 'slate/dist/transforms/text';
 
 export default createUseStyles({
   redUnderline: {
@@ -10,6 +11,10 @@ export default createUseStyles({
     backgroundSize: '300% 6px',
     backgroundPosition: '100% 100%',
     position: 'relative',
+    // fontFamily: 'Kanit, sans-serif',
+    // fonFamily: 'Roboto, sans-serif',
+    fontWeight:'600',
+    TextTransform:'uppercase'
   },
 
   animateWordIn: {
@@ -46,6 +51,7 @@ export default createUseStyles({
       '& $redUnderline': {
         [queries.m]: {
           backgroundSize: '300% 4px',
+          
         },
       },
     },

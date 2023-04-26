@@ -22,6 +22,7 @@ const ImageContentCollage: React.FC<Type> = ({
   Image,
 }) => {
   const classes = useStyles();
+   console.log(enableCTA)
 
   return (
     <Gutter

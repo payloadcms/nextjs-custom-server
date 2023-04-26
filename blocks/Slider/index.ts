@@ -4,11 +4,15 @@ import { Type as MediaType } from '../../collections/Media';
 
 export type Slide = {
   media: MediaType
+  content?: string
+  content2?: string
 }
 
 export type Type = {
   backgroundColor: BackgroundColorType
   slides: Slide[]
+  content?: unknown
+  content2?: unknown
   blockType: 'slider'
 }
 
@@ -20,6 +24,16 @@ const Slider: Block = {
   },
   fields: [
     backgroundColor,
+    {
+      name: 'content',
+      label: 'Content',
+      type: 'richText',
+    },
+    {
+      name: 'content2',
+      label: 'Content2',
+      type: 'richText',
+    },
     {
       name: 'slides',
       label: 'Slides',
@@ -36,6 +50,16 @@ const Slider: Block = {
           name: 'media',
           relationTo: 'media',
           required: true,
+        },
+        {
+          name: 'content',
+          label: 'Content',
+          type: 'textarea',
+        },
+        {
+          name: 'content2',
+          label: 'Content2',
+          type: 'textarea',
         },
       ],
     },

@@ -7,6 +7,10 @@ import { strokeWidth } from '../../css/sizes';
 export default createUseStyles({
   content: {
     overflow: 'hidden',
+    fontFamily: 'Kanit, sans-serif',
+    fonFamily: 'Roboto, sans-serif',
+    fontWeight:'900'
+// font-family: 'Roboto', sans-serif,
   },
   'align-center': {
     textAlign: 'center',
@@ -14,6 +18,17 @@ export default createUseStyles({
       p: {
         marginLeft: 'auto',
         marginRight: 'auto',
+        fontFamily: 'Kanit, sans-serif',
+        fonFamily: 'Roboto, sans-serif',
+        fontWeight:'500',
+        fontSize:'1.1rem',
+      },
+      h3: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        fontFamily: 'Kanit, sans-serif',
+        fonFamily: 'Roboto, sans-serif',
+        fontWeight:'900'
       },
     },
   },

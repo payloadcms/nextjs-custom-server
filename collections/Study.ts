@@ -12,7 +12,9 @@ import StickyContent, { Type as StickyContentType } from '../blocks/StickyConten
 import CallToAction, { Type as CallToActionType } from '../blocks/CallToAction';
 import Slider, { Type as SliderType } from '../blocks/Slider';
 import ImageStatCollage, { Type as ImageStatCollageType } from '../blocks/ImageStatCollage';
+import AltGrid, { Type as AltGridType } from '../blocks/AltGrid';
 import ImageGrid, { Type as ImageGridType } from '../blocks/ImageGrid';
+import LogoGrid, { Type as LogoGridType } from '../blocks/LogoGrid';
 import ImageCollage, { Type as ImageCollageType } from '../blocks/ImageCollage';
 import StudySlider, { Type as StudySliderType } from '../blocks/StudySlider';
 import CTAGrid, { Type as CTAGridType } from '../blocks/CTAGrid';
@@ -24,7 +26,9 @@ export type Layout =
   | ImageType
   | ImageCollageType
   | ImageContentCollageType
+  | AltGridType
   | ImageGridType
+  | LogoGridType
   | ImageStatCollageType
   | SliderType
   | SpacerType
@@ -33,7 +37,7 @@ export type Layout =
   | StudySliderType
 
 export type Type = {
-  title: string
+  title?: string
   featuredImage: MediaType
   previewImages: {
     image: MediaType
@@ -42,7 +46,7 @@ export type Type = {
   location?: string
   categories?: CategoryType[]
   slug: string
-  meta: MetaType
+  meta?: MetaType
   layout: Layout[]
 }
 
@@ -80,6 +84,8 @@ const Study: CollectionConfig = {
         ImageCollage,
         ImageContentCollage,
         ImageGrid,
+        AltGrid,
+        LogoGrid,
         ImageStatCollage,
         Slider,
         Spacer,

@@ -7,6 +7,7 @@ export default createUseStyles({
     display: 'flex',
     paddingBottom: base(7),
     alignItems: 'center',
+    marginTop:'-5rem',
     [queries.m]: {
       paddingBottom: base(4),
     },

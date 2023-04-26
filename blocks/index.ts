@@ -7,10 +7,12 @@ import StudySlider from './StudySlider/Component';
 import StickyContent from './StickyContent/Component';
 import Slider from './Slider/Component';
 import CallToAction from './CallToAction/Component';
+import AltGrid from './AltGrid/Component';
 import ImageGrid from './ImageGrid/Component';
 import ImageCollage from './ImageCollage/Component';
 import ImageStatCollage from './ImageStatCollage/Component';
 import CTAGrid from './CTAGrid/Component';
+import LogoGrid from './LogoGrid/Component';
 
 export const components = {
   'call-to-action': CallToAction,
@@ -22,6 +24,8 @@ export const components = {
   'Image-collage': ImageCollage,
   'Image-content-collage': ImageContentCollage,
   'Image-grid': ImageGrid,
+  'Alt-grid': AltGrid,
+  'Logo-grid': LogoGrid,
   'Image-stat-collage': ImageStatCollage,
   'study-slider': StudySlider,
   'sticky-content': StickyContent,
