@@ -12,8 +12,6 @@
   "author": "TRBL",
   "scripts": {
     "build:next": "next build",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
     "build:server": "tsc --project tsconfig.server.json",
     "build:payload": "payload build",
     "copyfiles:media": "copyfiles -u 1 media/**/*.{svg,jpg,png} dist/media",
