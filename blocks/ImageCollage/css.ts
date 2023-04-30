@@ -9,7 +9,7 @@ export default createUseStyles({
     alignItems: 'center',
     marginTop:'-6rem',
     position:'relative',
-    zIndex:3,
+    zIndex:4,
     [queries.m]: {
       paddingBottom: base(4),
     },
