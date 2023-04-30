@@ -10,7 +10,7 @@ const media = {
   '@global': {
     img: {
       width: '100%',
-      maxWidth: '100%',
+      maxWidth: '100rem',
     },
   },
 };

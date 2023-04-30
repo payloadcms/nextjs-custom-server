@@ -39,7 +39,7 @@ const ImageContentCollage: React.FC<Type> = ({
             {Image?.map((mediaItem, i) => (
               <li
                 key={i}
-                className={classes[`image${i + 1}`]}
+                className={classes[`media${i + 1}`]}
               >
                 <Parallax yDistance={imageSpeeds[i]}>
                   <Media {...mediaItem?.Image} />
