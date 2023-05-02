@@ -15,7 +15,7 @@
     "build:server": "tsc --project tsconfig.server.json",
     "build:payload": "payload build",
     "copyfiles:media": "copyfiles -u 1 media/**/*.{svg,jpg,png} dist/media",
-    "build": "cross-env NODE_ENV=production yarn build:payload && yarn build:server && yarn copyfiles:media && yarn build:next && yarn serve",
+    "build": "cross-env NODE_ENV=production yarn build:payload && yarn build:server && yarn copyfiles:media && yarn build:next",
     "dev": "ts-node server.ts",
     "seed": "ts-node seed/index.js",
     "serve": "cross-env NODE_ENV=production PAYLOAD_CONFIG_PATH=dist/payload.config.js node dist/server.js"
