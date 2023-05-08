@@ -4,7 +4,7 @@ import colors from '../../css/colors';
 import { label } from '../../css/type';
 
 export default createUseStyles({
-  button: ({ css }) => ({
+  button: ( css ) => ({
     cursor: 'pointer',
     borderRadius: base(2),
     backgroundColor: colors.gray,

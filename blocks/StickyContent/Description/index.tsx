@@ -21,8 +21,9 @@ const Description: React.FC<Props> = ({
   yScrollPos,
   i,
   active,
+  
 }) => {
-  const classes = useStyles({ active: i === active });
+  const classes = useStyles();
   const ref = useRef(null);
 
   useEffect(() => {

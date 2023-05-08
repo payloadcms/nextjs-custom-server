@@ -48,7 +48,7 @@ const LogoGrid: React.FC<Type> = ({
           <div className={classes.flex}>
           {Image?.map(({ Image: ImageFile, content: ImageContent }, i) => {
               const { yDistance } = mediaProps[i][largeBreak ? 'm' : 'l'];
-              const { top } = mediaProps[i][largeBreak ? 'm' : 'l'];
+            //  const { to p } = mediaProps[i][largeBreak ? 'm' : 'l'];
 
               return (
                 <Cell
@@ -58,7 +58,7 @@ const LogoGrid: React.FC<Type> = ({
                 
                     <div
                       className={classes.mediaWrap}
-                      style={{ position: 'relative', top }}
+                      style={{ position: 'relative' }}
                     >
                       <Media
                         {...ImageFile}
