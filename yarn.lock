@@ -782,10 +782,17 @@
   "resolved" "https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.4.tgz"
   "version" "1.2.4"
 
-"@types/react@^16.9.56":
-  "integrity" "sha512-c/5CYyciOO4XdFcNhZW1O2woVx86k4T+DO2RorHZL7EhitkNQgSD/SgpdZJAUJa/qjVgOmTM44gHkAdZSXeQuQ=="
-  "resolved" "https://registry.npmjs.org/@types/react/-/react-16.14.26.tgz"
-  "version" "16.14.26"
+"@types/react-dom@^18.2.4":
+  "integrity" "sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw=="
+  "resolved" "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.2.4.tgz"
+  "version" "18.2.4"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^16.14.41":
+  "integrity" "sha512-h+joCKF2r5rdECoM1U8WCEIHBp5/0TSR5Nyq8gtnnYY1n2WqGuj3indYqTjMb2/b5g2rfxJV6u4jUFq95lbT6Q=="
+  "resolved" "https://registry.npmjs.org/@types/react/-/react-16.14.41.tgz"
+  "version" "16.14.41"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
