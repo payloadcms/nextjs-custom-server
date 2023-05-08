@@ -40,7 +40,7 @@ const ImageGrid: Block = {
           'h5',
           'ul',
           'ol',
-          HR,
+          // HR,
           'link',
         ],
       },
