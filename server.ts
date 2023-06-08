@@ -25,18 +25,15 @@ const start = async () => {
     server.get('*', (req, res) => nextHandler(req, res));
 
     nextApp.prepare().then(() => {
-      console.log('NextJS started');
+      console.log('NextJS started'); // eslint-disable-line no-console
 
       server.listen(process.env.PORT, async () => {
-        console.log(`Server listening on ${process.env.PORT}...`);
+        console.log(`Server listening on ${process.env.PORT}...`); // eslint-disable-line no-console
       });
     });
   } else {
-    server.listen(process.env.PORT, async () => {
-      console.log('NextJS is now building...');
-      await nextBuild(path.join(__dirname, '../'));
-      process.exit();
-    });
+    await nextBuild(path.join(__dirname, '../'));
+    process.exit();
   }
 };
 
