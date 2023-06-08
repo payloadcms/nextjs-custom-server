@@ -11,7 +11,7 @@
   "license": "MIT",
   "author": "TRBL",
   "scripts": {
-    "build:next": "cross-env NEXT_BUILD=1 yarn serve",
+    "build:next": "next build",
     "build:server": "tsc --project tsconfig.server.json",
     "build:payload": "payload build",
     "copyfiles:media": "copyfiles -u 1 media/**/*.{svg,jpg,png} dist/media",

@@ -1,5 +1,4 @@
 import React from 'react';
-import payload from 'payload';
 import { GetServerSideProps } from 'next';
 import getConfig from 'next/config';
 import { Type as PageType } from '../collections/Page';
@@ -7,6 +6,7 @@ import NotFound from '../components/NotFound';
 import Head from '../components/Head';
 import classes from '../css/page.module.css';
 import RenderBlocks from '../components/RenderBlocks';
+import getPayloadClient from '../payloadClient';
 
 const { publicRuntimeConfig: { SERVER_URL } } = getConfig();
 
@@ -61,6 +61,8 @@ export default Page;
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const slug = ctx.params?.slug ? (ctx.params.slug as string[]).join('/') : 'home';
+
+  const payload = await getPayloadClient();
 
   const pageQuery = await payload.find({
     collection: 'pages',
