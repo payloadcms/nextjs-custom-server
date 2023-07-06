@@ -25,7 +25,7 @@ const start = async () => {
     server.get('*', (req, res) => nextHandler(req, res));
 
     nextApp.prepare().then(() => {
-      console.log('NextJS started');
+      console.log('Next.js started');
 
       server.listen(process.env.PORT, async () => {
         console.log(`Server listening on ${process.env.PORT}...`);
@@ -33,7 +33,7 @@ const start = async () => {
     });
   } else {
     server.listen(process.env.PORT, async () => {
-      console.log('NextJS is now building...');
+      console.log('Next.js is now building...');
       await nextBuild(path.join(__dirname, '../'));
       process.exit();
     });

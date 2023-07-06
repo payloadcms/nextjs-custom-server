@@ -43,7 +43,7 @@ const Page: React.FC<Props> = (props) => {
       <RenderBlocks layout={page.layout} />
       <footer className={classes.footer}>
         <hr />
-        NextJS + Payload Server Boilerplate made by
+        Next.js + Payload Server Boilerplate made by
         {' '}
         <a
           href="https://payloadcms.com"
